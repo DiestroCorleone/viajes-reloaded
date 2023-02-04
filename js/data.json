@@ -1,0 +1,7 @@
+{
+  "destinations": [
+    { "name": "Tokio", "boleto": " $ 100000 C/boleto" },
+    { "name": "Okinawa", "boleto": " $ 120000 C/boleto" },
+    { "name": "Hokkaido", "boleto": " $ 150000 C/boleto" }
+  ]
+}
