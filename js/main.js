@@ -1,10 +1,11 @@
 // Declaramos variables reutilizables
 let destinations = [];
 let temp = [];
+let inputValueDias = document.getElementById("dias").value;
+let inputValuePersonas = document.getElementById("personas").value;
 
 //Validar campo completado de Dias
-function ingresarDias() {
-  let inputValueDias = document.getElementById("dias").value;
+function ingresarDias(inputValueDias) {
   while (inputValueDias == "") {
     inputValueDias = document.getElementById("errDias").innerHTML =
       "*Ingrese cantidad de días";
@@ -14,8 +15,7 @@ function ingresarDias() {
 }
 
 //validar campo completado de Personas
-function ingresarPersonas() {
-  let inputValuePersonas = document.getElementById("personas").value;
+function ingresarPersonas(inputValuePersonas) {
   while (inputValuePersonas == "") {
     inputValuePersonas = document.getElementById("errPersonas").innerHTML =
       "*Ingrese cantidad de Personas";
@@ -25,9 +25,7 @@ function ingresarPersonas() {
 }
 
 //validar si ya se completaron los campos
-function reset() {
-  let inputValueDias = document.getElementById("dias").value;
-  let inputValuePersonas = document.getElementById("personas").value;
+function reset(inputValueDias, inputValuePersonas) {
   if (inputValueDias != "") {
     document.getElementById("errDias").innerHTML = "";
   }
