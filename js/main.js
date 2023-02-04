@@ -247,20 +247,21 @@ function borrarConsultas() {
   location.reload();
 }
 
-//json de lugar
-
+// Hacemos Fetch al JSON en cuanto carga el documento.
 $(document).ready(function () {
   fetch("http://127.0.0.1:5500/viajes/js/data.json")
     .then((response) => response.json())
     .then((json) => {
-      json.destinations.map((destination) =>
-        temp.push({
-          name: destination.name,
-          boleto: destination.boleto,
-        })
+      json.destinations.map(
+        (
+          destination // Mapeamos el JSON a la variable temp.
+        ) =>
+          temp.push({
+            name: destination.name,
+            boleto: destination.boleto,
+          })
       );
 
-      console.log(temp);
       //mostrar option
       if (temp.length > 0) {
         $.each(temp, function (id, name, boleto) {
